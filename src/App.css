@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme{
+    --font-sans: Nunito, system-ui, -apple-system, sans-serif;
+
     --color-whitish: #F0F0F5;
     --color-grayish: #8888AA;
     --color-blackish: #16161F;
