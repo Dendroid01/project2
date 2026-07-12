@@ -4,13 +4,15 @@ interface StatsItemProps {
     value: string | number;
 }
 
-function StatsItem({icon, label, value}: StatsItemProps) {
+export default function StatsItem({ icon, label, value }: StatsItemProps) {
     return (
-        <div className="flex min-w-16 flex-col items-center justify-center px-4 py-2 rounded-xl bg-blackish">
-            <span className="text-grayish text-xs font-bold">{icon} {label}</span>
-            <span className="text-whitish text-2xl font-black">{value}</span>
+        <div className="flex min-w-16 flex-col items-center justify-center px-4 py-2 rounded-xl bg-blackish border border-dark">
+      <span className="text-grayish text-[0.65rem] font-bold uppercase tracking-wider">
+        {icon} {label}
+      </span>
+            <span className="text-whitish text-xl font-black">
+        {value}
+      </span>
         </div>
     );
 }
-
-export default StatsItem
