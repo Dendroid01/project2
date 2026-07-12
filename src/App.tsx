@@ -59,7 +59,6 @@ export default function App() {
     const [isChecking, setIsChecking] = useState(false);
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-    // Timer
     useEffect(() => {
         if (gameStarted && !gameWon) {
             timerRef.current = setInterval(
@@ -111,7 +110,6 @@ export default function App() {
             const second = tiles[secondId];
 
             if (first.pairId === second.pairId) {
-                // Match!
                 setIsChecking(true);
                 setTimeout(() => {
                     setTiles((prev) => {
@@ -127,7 +125,6 @@ export default function App() {
                     setIsChecking(false);
                 }, 250);
             } else {
-                // Mismatch
                 setIsChecking(true);
                 setMismatchIds([firstId, secondId]);
                 setTimeout(() => {
